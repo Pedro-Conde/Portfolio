@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hiro Mashida</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="hiro.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500&family=Zilla+Slab&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <img src="assets/images/Logo_color2.svg" alt="Pedro Conde Logo" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-links desktop-nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <div class="mobile-menu-icon" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="nav-links mobile-nav" id="mobileNav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+
+  <main class="character-page">
+    <h1 class="character-name">Maya Hansen</h1>
+    <img src="assets/drawings/maya.jpg" alt="Hiro Mashida" class="character-image" />
+
+    <section class="character-section">
+      <h2>How it came to life</h2>
+      <p>
+        Right after creating Hiro, I decided to create more characters and integrate them to my story that I was writing at the time, and 
+        Maya was the second character I came up with. Her name comes from the character May from the Pokémon series. I added an 'a', and made it
+        my character. How original.
+        </p>
+        <p>I made her in the image of my 'perfect girl'. She is everything I would wish for in a romantic interest, and because of that, she is
+          Hiro's romantic interest. This is mainly the reason why she is my comfort character.
+        </p>
+        <p>She's shy and doesn't open easily, but once she gets comfortable with you, she becomes a complete chatterbox. She's very emotional, but
+          mature at the same time. Maya loves reading, spending time with her loved ones, and cats. Her favourite color is yellow.
+        </p>
+    </section>
+
+    <section class="character-section">
+      <h2>Inspirations</h2>
+      <p>
+        Maya's first design was based on Harley Queen from the Suicide Squad movie. Why? Because I watched the movie a couple days before creating her.
+        (Un)Fortunately, this does not resonate with her current design.
+      </p>
+      <p>
+        Her current design was based on Kim Chaewon from the K-pop group Le Sserafim, especially when she had blond hair.
+      </p>
+      <p>
+        Part of her design was also inspired by Hanni from NewJeans, and Rosé from Blackpink.
+      </p>
+    </section>
+
+    <section class="character-section">
+      <h2>Previous Designs</h2>
+
+      <div class="year-block">
+        <h3>2016 - 2019</h3>
+        <div class="year-gallery">
+          <img src="assets/drawings/maya1.jpg" alt="Hiro 2015 #1">
+          <img src="assets/drawings/maya2.jpg" alt="Hiro 2015 #2">
+          <img src="assets/drawings/maya3.jpg" alt="Hiro 2015 #3">
+        </div>
+      </div>
+
+      <div class="year-block">
+        <h3>2022/23</h3>
+        <div class="year-gallery">
+          <img src="assets/drawings/maya4.jpg" alt="Hiro 2020 #1">
+          <img src="assets/drawings/maya5.jpg" alt="Hiro 2020 #2">
+          <img src="assets/drawings/maya6.jpg" alt="Hiro 2020 #3">
+        </div>
+      </div>
+
+      <div class="year-block">
+        <h3>2024/25</h3>
+        <div class="year-gallery">
+          <img src="assets/drawings/maya7.jpeg" alt="Hiro 2022 #1">
+          <img src="assets/drawings/maya8.jpg" alt="Hiro 2022 #2">
+          <img src="assets/drawings/maya9.jpg" alt="Hiro 2022 #3">
+        </div>
+      </div>
+    </section>
+
+    <div class="button-row">
+      <a href="kyoto.html" class="brand-button">See more about Kyoto</a>
+      <a href="projects.html" class="brand-button">Go back to Drawings</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="assets/images/Logo_dark.svg" alt="Logo" class="footer-logo" />
+      <p>&copy; 2025 Pedro Conde. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <a href="https://www.linkedin.com/in/pedro-conde-a62245355/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.instagram.com/hirohtm/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+    // Highlight current page link
+  const links = document.querySelectorAll('.nav-link, .mobile-nav a');
+  const path = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === path) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+</script>
+</body>
+</html>
