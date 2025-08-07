@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Han-Taro Kim</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="hiro.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500&family=Zilla+Slab&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <img src="assets/images/Logo_color2.svg" alt="Pedro Conde Logo" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-links desktop-nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <div class="mobile-menu-icon" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="nav-links mobile-nav" id="mobileNav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+
+  <main class="character-page">
+    <h1 class="character-name">Han-Taro Kim</h1>
+    <img src="assets/drawings/kim6.jpg" alt="Han-Taro Kim" class="character-image" />
+
+    <section class="character-section">
+      <h2>How it came to life</h2>
+      <p>
+        Just like Momoka, I made Kim all the way back in 2019. I was a huge fan of My Hero Academia at the time, so I wanted to create a character
+        with green hair like Midoriya.
+      <p>
+        Although his initial design was based on Midoriya, I made Kim's personality completely different. He is the 'golden retriever' of the group,
+        always full of energy and playing around. His favorite color is green.
+      </p>
+      <p>
+        Kim's initial concepts were made all the way back in 2016, but I did not make him an actual character back then, he didn't even have a name.
+        Only in 2019 I decided to take these sketches from when I was 10 and turn it into an OC, even though I didn't have the same proficiency I have
+        nowadays.
+      </p>
+    </section>
+
+    <section class="character-section">
+      <h2>Inspirations</h2>
+      <p>
+        Kim fell in the same category as Momoka. His design would change everytime I decided to draw him.
+      </p>
+      <p>
+        Kim's current design is based on Ezreal from League of Legends, more specifically the <i>Heartsteel</i> skin, and the K-pop artist Hyunjin 
+        from Stray Kids.
+      </p>
+    </section>
+
+    <section class="character-section">
+      <h2>Previous Designs</h2>
+
+      <div class="carousel-container">
+        <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+
+        <div class="carousel-slide active">
+          <h3>2019 - 2022</h3>
+          <div class="carousel-gallery">
+            <img src="assets/drawings/kim1.jpeg" alt="Kyoto 2016 #1">
+            <img src="assets/drawings/kim2.jpg" alt="Kyoto 2016 #2">
+            <img src="assets/drawings/kim3.jpg" alt="Kyoto 2016 #3">
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <h3>2023 - 2025</h3>
+          <div class="carousel-gallery">
+            <img src="assets/drawings/kim4.jpg" alt="Kyoto 2022 #1">
+            <img src="assets/drawings/kim5.jpg" alt="Kyoto 2022 #2">
+            <img src="assets/drawings/kim.jpg" alt="Kyoto 2022 #3">
+          </div>
+        </div>
+
+        <button class="carousel-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+    </section>
+
+    <div class="button-row">
+      <a href="ada.html" class="brand-button">See more about Ada</a>
+      <a href="projects.html" class="brand-button">Go back to Drawings</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="assets/images/Logo_dark.svg" alt="Logo" class="footer-logo" />
+        <p>&copy; 2025 Pedro Conde. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:pedroconde12345@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+        <a href="https://www.linkedin.com/in/pedro-conde-a62245355/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/hirohtm/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // Navbar highlight
+    const links = document.querySelectorAll('.nav-link, .mobile-nav a');
+    const path = window.location.pathname.split("/").pop();
+    links.forEach(link => {
+      link.classList.toggle("active", link.getAttribute("href") === path);
+    });
+
+    // Carousel logic
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide >= slides.length) currentSlide = 0;
+      if (currentSlide < 0) currentSlide = slides.length - 1;
+      showSlide(currentSlide);
+    }
+
+    // Initialize
+    showSlide(currentSlide);
+  </script>
+</body>
+</html>

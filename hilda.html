@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hilda Garcia</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="hiro.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500&family=Zilla+Slab&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <img src="assets/images/Logo_color2.svg" alt="Pedro Conde Logo" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-links desktop-nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <div class="mobile-menu-icon" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="nav-links mobile-nav" id="mobileNav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+
+  <main class="character-page">
+    <h1 class="character-name">Hilda Garcia</h1>
+    <img src="assets/drawings/hilda.jpg" alt="Hilda Garcia" class="character-image" />
+
+    <section class="character-section">
+      <h2>How it came to life</h2>
+      <p>
+        Just like Tyson, Hilda was a complete accident. In grade 11, we had to make a drawing with eight characters in my arts class. At the moment
+        I only had seven, so I had to create a character on the spot. I loved her design so much that I turned her into an OC.
+      <p>
+        It was also kind of a coincidence. I wanted a Brazillian character since it's where I'm from, and Hilda traits were similar. She wasn't 
+        named yet, so giving her a Brazillian name and adjusting some parts of her design would make it work just fine. And for this reason, she
+        is one of my most biased characters currently.
+      </p>
+      <p>
+        Hilda is the group's athlete. She's a volleyball player, and very active in general. She's also the representation of my culture, someone
+        bright and happy, that knows when to be strict or take things seriously. She also loves partying. Her favorite color is blue.
+      </p>
+    </section>
+
+    <section class="character-section">
+      <h2>Inspirations</h2>
+      <p>
+        Just like Minerva, I didn't use any references or inspirations for her design. The only thing I did use, was the name Hilda. This name
+        comes from the character Hilda from Pokémon Black and White.
+      </p>
+    </section>
+
+    <section class="character-section">
+      <h2>Previous Designs</h2>
+
+      <div class="carousel-container">
+        <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+
+        <div class="carousel-slide active">
+          <h3>2023 - 2025</h3>
+          <div class="carousel-gallery">
+            <img src="assets/drawings/hilda1.jpg" alt="Kyoto 2016 #1">
+            <img src="assets/drawings/hilda2.jpg" alt="Kyoto 2016 #2">
+            <img src="assets/drawings/hilda.jpg" alt="Kyoto 2016 #3">
+          </div>
+        </div>
+
+        <button class="carousel-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+    </section>
+
+    <div class="button-row">
+      <a href="hiro.html" class="brand-button">Go back to Hiro</a>
+      <a href="projects.html" class="brand-button">Go back to Drawings</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="assets/images/Logo_dark.svg" alt="Logo" class="footer-logo" />
+        <p>&copy; 2025 Pedro Conde. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:pedroconde12345@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+        <a href="https://www.linkedin.com/in/pedro-conde-a62245355/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/hirohtm/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // Navbar highlight
+    const links = document.querySelectorAll('.nav-link, .mobile-nav a');
+    const path = window.location.pathname.split("/").pop();
+    links.forEach(link => {
+      link.classList.toggle("active", link.getAttribute("href") === path);
+    });
+
+    // Carousel logic
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide >= slides.length) currentSlide = 0;
+      if (currentSlide < 0) currentSlide = slides.length - 1;
+      showSlide(currentSlide);
+    }
+
+    // Initialize
+    showSlide(currentSlide);
+  </script>
+</body>
+</html>

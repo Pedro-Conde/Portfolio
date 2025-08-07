@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minerva Laurent</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="hiro.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500&family=Zilla+Slab&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <img src="assets/images/Logo_color2.svg" alt="Pedro Conde Logo" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-links desktop-nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <div class="mobile-menu-icon" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="nav-links mobile-nav" id="mobileNav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+
+  <main class="character-page">
+    <h1 class="character-name">Minerva Laurent</h1>
+    <img src="assets/drawings/mila.jpg" alt="Minerva Laurent" class="character-image" />
+
+    <section class="character-section">
+      <h2>How it came to life</h2>
+      <p>
+        Before I made Mila, I noticed I had four male characters and two females. To make it more fair, I decided to create more female characters.
+      <p>
+        When I was a kid, I used to have a huge crush on ginger characters in movies and cartoons, so I made Minerva with this old memory pairing
+        my head. Surprisingly, she is the hardest character to draw in my opinion because of her features (hair, eyes, etc.)
+      </p>
+      <p>
+        Mila's personality is close to Zeke's, in a sense that she is always joking around with the girls and is fierce and lively. Although she is
+        explicitly soft and emotional, in counterpart to him.
+      </p>
+      <p>
+        Since she is one of my most recent characters, I do not have that many drawings of her.
+      </p>
+      <p>Her favorite color is magenta.</p>
+    </section>
+
+    <section class="character-section">
+      <h2>Inspirations</h2>
+      <p>
+        I credit myself a lot when it comes to Minerva's design because I didn't use references. I came up with her entire design, without basing her
+        in anything. I just knew I wanted a character that looks more 'mature', and that's why I sometimes draw her with makeup and piercings.
+      </p>
+    </section>
+
+    <section class="character-section">
+      <h2>Previous Designs</h2>
+
+      <div class="carousel-container">
+        <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+
+        <div class="carousel-slide active">
+          <h3>2022/23</h3>
+          <div class="carousel-gallery">
+            <img src="assets/drawings/mila1.jpg" alt="Kyoto 2016 #1">
+            <img src="assets/drawings/mila3.jpg" alt="Kyoto 2016 #2">
+            <img src="assets/drawings/mila.jpg" alt="Kyoto 2016 #3">
+          </div>
+        </div>
+
+        <button class="carousel-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+    </section>
+
+    <div class="button-row">
+      <a href="kim.html" class="brand-button">See more about Kim</a>
+      <a href="projects.html" class="brand-button">Go back to Drawings</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="assets/images/Logo_dark.svg" alt="Logo" class="footer-logo" />
+        <p>&copy; 2025 Pedro Conde. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:pedroconde12345@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+        <a href="https://www.linkedin.com/in/pedro-conde-a62245355/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/hirohtm/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // Navbar highlight
+    const links = document.querySelectorAll('.nav-link, .mobile-nav a');
+    const path = window.location.pathname.split("/").pop();
+    links.forEach(link => {
+      link.classList.toggle("active", link.getAttribute("href") === path);
+    });
+
+    // Carousel logic
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide >= slides.length) currentSlide = 0;
+      if (currentSlide < 0) currentSlide = slides.length - 1;
+      showSlide(currentSlide);
+    }
+
+    // Initialize
+    showSlide(currentSlide);
+  </script>
+</body>
+</html>

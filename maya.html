@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maya Hansen</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="hiro.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500&family=Zilla+Slab&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <img src="assets/images/Logo_color2.svg" alt="Pedro Conde Logo" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-links desktop-nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <div class="mobile-menu-icon" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="nav-links mobile-nav" id="mobileNav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+
+  <main class="character-page">
+    <h1 class="character-name">Maya Hansen</h1>
+    <img src="assets/drawings/maya.jpg" alt="Maya Hansen" class="character-image" />
+
+    <section class="character-section">
+      <h2>How it came to life</h2>
+      <p>
+        Right after creating Hiro, I decided to create more characters and integrate them to my story that I was writing at the time, and
+        Maya was the second character I came up with. Her name comes from the character May from the Pokémon series. I added an 'a', and made it
+        my character. How original.
+      <p>
+        I made her in the image of my 'perfect girl'. She is everything I would wish for in a romantic interest, and because of that, she is
+        Hiro's romantic interest. This is mainly the reason why she is my comfort character.
+      </p>
+      <p>
+        She's shy and doesn't open easily, but once she gets comfortable with you, she becomes a complete chatterbox. She's very emotional, but
+        mature at the same time. Maya loves reading, spending time with her loved ones, and cats. Her favourite color is yellow.
+      </p>
+    </section>
+
+    <section class="character-section">
+      <h2>Inspirations</h2>
+      <p>
+        Maya's current design is based on Kim Chaewon from the K-pop group Le Sserafim, especially when she had blond hair.  
+        Part of her design was also inspired by Hanni from NewJeans, and Rosé from Blackpink.
+      </p>
+    </section>
+
+    <section class="character-section">
+      <h2>Previous Designs</h2>
+
+      <div class="carousel-container">
+        <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+
+        <div class="carousel-slide active">
+          <h3>2015 - 2019</h3>
+          <div class="carousel-gallery">
+            <img src="assets/drawings/maya1.jpg" alt="Kyoto 2016 #1">
+            <img src="assets/drawings/maya2.jpg" alt="Kyoto 2016 #2">
+            <img src="assets/drawings/maya3.jpg" alt="Kyoto 2016 #3">
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <h3>2020 - 2023</h3>
+          <div class="carousel-gallery">
+            <img src="assets/drawings/maya4.jpg" alt="Kyoto 2022 #1">
+            <img src="assets/drawings/maya5.jpg" alt="Kyoto 2022 #2">
+            <img src="assets/drawings/maya6.jpg" alt="Kyoto 2022 #3">
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <h3>2024/25</h3>
+          <div class="carousel-gallery">
+            <img src="assets/drawings/maya7.jpeg" alt="Kyoto 2024 #1">
+            <img src="assets/drawings/maya8.jpg" alt="Kyoto 2024 #2">
+            <img src="assets/drawings/maya.jpg" alt="Kyoto 2024 #3">
+          </div>
+        </div>
+
+        <button class="carousel-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+    </section>
+
+    <div class="button-row">
+      <a href="kyoto.html" class="brand-button">See more about Kyoto</a>
+      <a href="projects.html" class="brand-button">Go back to Drawings</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="assets/images/Logo_dark.svg" alt="Logo" class="footer-logo" />
+        <p>&copy; 2025 Pedro Conde. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:pedroconde12345@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+        <a href="https://www.linkedin.com/in/pedro-conde-a62245355/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/hirohtm/" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="main.js"></script>
+  <script>
+    // Navbar highlight
+    const links = document.querySelectorAll('.nav-link, .mobile-nav a');
+    const path = window.location.pathname.split("/").pop();
+    links.forEach(link => {
+      link.classList.toggle("active", link.getAttribute("href") === path);
+    });
+
+    // Carousel logic
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function changeSlide(direction) {
+      currentSlide += direction;
+      if (currentSlide >= slides.length) currentSlide = 0;
+      if (currentSlide < 0) currentSlide = slides.length - 1;
+      showSlide(currentSlide);
+    }
+
+    // Initialize
+    showSlide(currentSlide);
+  </script>
+</body>
+</html>

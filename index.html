@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pedro Conde Portfolio</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+  <!-- Swiper.js CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&family=Zilla+Slab:ital,wght@1,400&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <img src="assets/images/Logo_color2.svg" alt="Pedro Conde Logo" />
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-links desktop-nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <div class="mobile-menu-icon" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="nav-links mobile-nav" id="mobileNav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <main class="hero">
+    <p class="tagline">Where brushstrokes meet design</p>
+
+    <h1 class="hero-subtitle">
+      Portfolio of a multidisciplinary<br />
+      designer and visual storyteller
+    </h1>
+
+    <div class="name-container">
+      <svg id="signature" viewBox="0 0 800 150" xmlns="http://www.w3.org/2000/svg">
+        <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle">
+          Pedro Conde
+        </text>
+      </svg>
+    </div>
+
+    <div class="hero-buttons">
+      <a href="about.html" class="btn mauve">About Me</a>
+      <a href="assets/resume_Pedro.pdf" target="_blank" class="btn dark">My Resume</a>
+    </div>
+
+    <a href="#sample-projects" class="scroll-down">Scroll Down ↓</a>
+  </main>
+  
+  <section class="sample-projects" id="sample-projects">
+  <section class="projects-section">
+  <h2 class="section-title">Sample Projects</h2>
+
+  <div class="carousel-container">
+    <!-- Project Cards -->
+    <div class="project-card active" id="card-0">
+      <p class="project-discipline">UX/UI & Graphic Design</p>
+      <h3 class="project-title">NaNa Media</h3>
+      <p class="project-description">Manga Selling App concept & design</p>
+      <div class="project-tools">
+        <span class="tool-badge">Figma</span>
+        <span class="tool-badge">Illustrator</span>
+        <span class="tool-badge">Canva</span>
+      </div>
+      <a href="projects.html#nana-media" class="read-more">Read more</a>
+      <div class="project-images">
+  <img src="assets/images/Logo_For_Socials_NaNa.jpg" alt="NaNa Logo" class="img-logo" />
+  <img src="assets/images/Home-Page-Mockup_NaNa.jpg" alt="Portrait 1" class="img-portrait" />
+  <img src="assets/images/Product-Page.jpg" alt="Portrait 2" class="img-portrait" />
+</div>
+    </div>
+
+    <div class="project-card" id="card-1">
+      <p class="project-discipline">Graphic Design</p>
+      <h3 class="project-title">West Ham Rebranding</h3>
+      <p class="project-description">A bold visual overhaul for a classic club</p>
+      <div class="project-tools">
+        <span class="tool-badge">Photoshop</span>
+        <span class="tool-badge">Illustrator</span>
+        <span class="tool-badge">Canva</span>
+      </div>
+      <a href="projects.html#west-ham" class="read-more">Read more</a>
+      <div class="project-images">
+  <img src="assets/images/West_Ham_Redesign.jpg" alt="WH Logo 1" class="img-logo" />
+  <img src="assets/images/West_Ham_United_FC_logo.svg.png" alt="WH Logo 2" class="img-logo" />
+</div>
+    </div>
+
+    <div class="project-card" id="card-2">
+      <p class="project-discipline">Drawings & Motion Graphics</p>
+      <h3 class="project-title">Sweet Venom</h3>
+      <p class="project-description">Motion design project in After Effects</p>
+      <div class="project-tools">
+        <span class="tool-badge">After Effects</span>
+        <span class="tool-badge">Photoshop</span>
+        <span class="tool-badge">Illustrator</span>
+        <span class="tool-badge">Ibis PaintX</span>
+      </div>
+      <a href="projects.html#sweet-venom" class="read-more">Read more</a>
+      <div class="project-images">
+  <img src="assets/images/Sweet_V_BW.jpg" alt="Sweet Venom 1" class="img-landscape" />
+  <img src="assets/images/Hiro_lap_B_close.png" alt="Sweet Venom 2" class="img-landscape" />
+  <img src="assets/images/SV_Mirror.jpg" alt="Sweet Venom 3" class="img-landscape" />
+</div>
+
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="carousel-controls">
+      <button id="prev-btn">←</button>
+      <button id="next-btn">→</button>
+    </div>
+  </div>
+</section>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="assets/images/Logo_dark.svg" alt="Logo" class="footer-logo" />
+      <p>&copy; 2025 Pedro Conde. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <a href="mailto:pedroconde12345@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/pedro-conde-a62245355/" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://www.instagram.com/hirohtm/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- JS -->
+  <script src="main.js"></script>
+  <script>
+  // Highlight current page link
+  const links = document.querySelectorAll('.nav-link, .mobile-nav a');
+  const path = window.location.pathname.split("/").pop();
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === path) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+</script>
+
+</body>
+</html>
