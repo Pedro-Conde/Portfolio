@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Pedro Conde</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&family=Zilla+Slab:wght@300;400;500;600&family=Allura&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="logo.svg" />
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="Pedro Conde Logo">
+            </a>
+            
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                </ul>
+                
+                <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="projects-section">
+            <div class="container">
+                <!-- Tab Navigation -->
+                <div class="tab-navigation">
+                    <button class="tab-btn active" data-tab="illustrations">Illustrations</button>
+                    <button class="tab-btn" data-tab="uxui">UX/UI</button>
+                    <button class="tab-btn" data-tab="graphic">Graphic Design</button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="tab-content-wrapper">
+                    <!-- Illustrations Tab -->
+                    <div class="tab-content active" id="illustrations">
+                        <div class="tab-header">
+                            <h1 class="tab-title">Drawings and Illustrations</h1>
+                            <p class="tab-description">My passion for creative works started at drawings. I've been an anime and manga fan since I was 6, which is conveyed in my art style. I started creating my OCs (Original Characters) ever since, and here are some of them. From their creative processes, to the redesigns along the years.</p>
+                        </div>
+
+                        <div class="projects-grid illustration-grid">
+                            <!-- Project 1: My Characters -->
+                            <a href="characters.html" class="illustration-card">
+                                <div class="illustration-image">
+                                    <img src="projects/characters_thumbnail.jpg" alt="My Characters">
+                                    <div class="illustration-overlay">
+                                        <span class="view-project">See More →</span>
+                                    </div>
+                                </div>
+                                <div class="illustration-info">
+                                    <h3>My Characters</h3>
+                                    <p>A collection of original characters I've created over the years, showcasing their evolution and creative development.</p>
+                                </div>
+                            </a>
+
+                            <!-- Project 2: Gallery -->
+                            <a href="gallery.html" class="illustration-card">
+                                <div class="illustration-image">
+                                    <img src="projects/gallery_thumbnail.jpg" alt="Gallery">
+                                    <div class="illustration-overlay">
+                                        <span class="view-project">See More →</span>
+                                    </div>
+                                </div>
+                                <div class="illustration-info">
+                                    <h3>Gallery</h3>
+                                    <p>A curated selection of my best illustrations, exploring various styles, themes, and artistic techniques.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- UX/UI Tab -->
+                    <div class="tab-content" id="uxui">
+                        <div class="tab-header">
+                            <h1 class="tab-title">UX/UI</h1>
+                            <p class="tab-description">I believe good design starts with empathy. My UX/UI projects focus on creating intuitive, user-friendly experiences that balance function and form. Whether it's a mobile app or a web platform, I aim to design with clarity, accessibility, and the end user in mind.</p>
+                        </div>
+
+                        <div class="projects-list">
+                            <!-- Project 1: NaNa Media App -->
+                            <a href="nana.html" class="design-card">
+                                <div class="design-image">
+                                    <img src="projects/Logo_For_Socials_NaNa.jpg" alt="NaNa Media App">
+                                </div>
+                                <div class="design-info">
+                                    <h3>NaNa Media App</h3>
+                                    <p class="software">Figma • Adobe Illustrator</p>
+                                    <p class="description">A mobile app designed to streamline media consumption and content discovery, focusing on personalized user experiences and intuitive navigation.</p>
+                                </div>
+                            </a>
+
+                            <!-- Project 2: NoteBox App -->
+                            <a href="notebox.html" class="design-card">
+                                <div class="design-image">
+                                    <img src="projects/Notebox_Logo.jpg" alt="NoteBox App">
+                                </div>
+                                <div class="design-info">
+                                    <h3>NoteBox App</h3>
+                                    <p class="software">Figma • Adobe Illustrator</p>
+                                    <p class="description">A note-taking mobile app that emphasizes organization and simplicity, helping users capture and manage their thoughts efficiently.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Graphic Design Tab -->
+                    <div class="tab-content" id="graphic">
+                        <div class="tab-header">
+                            <h1 class="tab-title">Graphic Design</h1>
+                            <p class="tab-description">Graphic design is where I get to mix storytelling with visuals. From branding to layouts, I explore how color, typography, and composition can communicate meaning and emotion. Each project is a chance to express identity in a bold, memorable way.</p>
+                        </div>
+
+                        <div class="projects-list">
+                            <!-- Project 1: Sweet Venom -->
+<a href="venom.html" class="design-card">
+    <div class="design-image">
+        <img src="projects/venom_top.png" alt="Sweet Venom" class="image-default">
+        <img src="projects/venom_thumb.jpg" alt="Sweet Venom Hover" class="image-hover">
+    </div>
+    <div class="design-info">
+        <h3>Sweet Venom - Motion Graphics Video</h3>
+        <p class="software">After Effects • Illustrator • Photoshop</p>
+        <p class="description">A dynamic motion graphics project that combines bold visuals with fluid animation to tell a compelling visual story.</p>
+    </div>
+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <img src="Logo_dark.svg" alt="Pedro Conde Logo" class="footer-logo">
+                    <p class="copyright">&copy; Pedro Conde 2025. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="https://www.linkedin.com/in/pedro-conde-a62245355/" target="_blank" class="footer-link">LinkedIn</a>
+                    <a href="https://www.instagram.com/hirohtm/" target="_blank" class="footer-link">Instagram</a>
+                    <button class="footer-link faq-trigger" id="faqTrigger">FAQ</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FAQ Modal -->
+    <div class="faq-overlay" id="faqOverlay">
+        <div class="faq-modal" id="faqModal">
+            <button class="faq-close" id="faqClose">&times;</button>
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    What services do you offer?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>I offer a range of design services including branding, UI/UX design, illustration, web design, and visual storytelling. Each project is tailored to meet specific client needs.</p>
+                    <p>Additionally, I also offer illustration services such as drawing requests, icons (for YouTube, Instagram, Twitch, etc.), stickers, and many more.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    How long does a typical project take?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Project timelines vary depending on scope and complexity. Smaller projects may take 2-4 weeks, while larger branding or web design projects can take 6-12 weeks.</p>
+                    <p>Same works for illustration projects, and the amount of assets requested. If it is just a single illustration, it may take 4-10 hours depending on complexity. More illustrations can take up to days.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    What is your design/drawing process?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>My process includes: discovery and research, concept development, design iterations, client feedback rounds, and final delivery with all necessary files and documentation.</p>
+                    <p>The process is quite similar for illustrations, since I want to understand my client's needs before I start sketching. I also like to send the sketch for analysis before I start the lineart.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you work with international clients?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! I work with clients worldwide and am experienced in remote collaboration using modern communication and project management tools.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    How can I get started on a project?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Simply reach out through the contact page or <a href="contact.html">here</a> with details about your project. I'll get back to you within 24-48 hours to discuss your needs and provide a proposal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

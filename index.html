@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Conde - Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&family=Zilla+Slab:wght@300;400;500;600&family=Allura&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="logo.svg" />
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar" id="navbar">
+    <div class="navbar-container">
+        <a href="index.html" class="logo">
+            <img src="logo.svg" alt="Pedro Conde Logo">
+        </a>
+        
+        <div class="nav-right">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+            
+            <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="opening-title">Where brushstrokes meet design</h1>
+                <p class="main-motif">Portfolio of a multidisciplinary designer and visual storyteller</p>
+                
+                <div class="signature-container">
+    <h2 class="signature-text">Pedro Conde</h2>
+</div>
+                <div class="cta-buttons">
+                    <a href="projects.html" class="btn btn-primary">View Work</a>
+                    <a href="my_resume.pdf" target="_blank" class="btn btn-secondary">My Resume</a>
+                </div>
+                
+                <button class="scroll-indicator" id="scrollIndicator">
+                    <span>Scroll Down</span>
+                    <svg class="arrow-down" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <path id="arrow-path" d="M 20 10 L 20 30 M 20 30 L 15 25 M 20 30 L 25 25" 
+                              stroke="currentColor" 
+                              stroke-width="2" 
+                              stroke-linecap="round" 
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- About Preview Section -->
+        <section class="about-preview" id="aboutPreview">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Blending Art, Design, and the passion for creativity</h2>
+                        <p>Visual arts has been a passion of mine from a young age. Explore around to see my work!</p>
+                        <a href="about.html" class="btn btn-primary">Learn more about me</a>
+                    </div>
+                    <div class="about-image">
+                        <img src="portrait.jpg" alt="Artistic illustration of Pedro Conde">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Work Section -->
+<section class="selected-work">
+    <div class="container">
+        <h2 class="section-title">Selected Work</h2>
+        
+        <div class="carousel-container">
+            <button class="carousel-btn prev" id="prevBtn">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <path d="M 20 5 L 10 15 L 20 25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            
+            <div class="carousel">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Project 1 - NaNa Media -->
+                    <a href="nana.html" class="project-card">
+                        <div class="project-image">
+                            <img src="nana_logo.svg" alt="NaNa Media Project">
+                            <div class="project-overlay">
+                                <span class="view-project">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>NaNa Media</h3>
+                            <p class="disciplines">Branding • UI/UX Design</p>
+                            <p class="software">Adobe Illustrator, Figma, Canva</p>
+                            <p class="description">Manga Selling App concept & design.</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Project 2 - Hiro Mashida -->
+                    <a href="projects.html" class="project-card">
+                        <div class="project-image">
+                            <img src="drawings_logo.jpg" alt="Drawings">
+                            <div class="project-overlay">
+                                <span class="view-project">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Drawings Tab</h3>
+                            <p class="disciplines">Visual Design, Illustration</p>
+                            <p class="software">IbisPaintX, Photoshop</p>
+                            <p class="description">A collection of illustration, including OCs (Original Characters) and others.</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Project 3 - Sweet Venom -->
+                    <a href="venom.html" class="project-card">
+                        <div class="project-image">
+                            <img src="venom_logo.jpg" alt="Sweet Venom Project">
+                            <div class="project-overlay">
+                                <span class="view-project">View Project →</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Sweet Venom</h3>
+                            <p class="disciplines">Motion Graphics • Illustrations • Storytelling</p>
+                            <p class="software">After Effects, IbisPaintX, Photoshop</p>
+                            <p class="description">A motion graphics project, hand-drew and later produced in After Effects.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <button class="carousel-btn next" id="nextBtn">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <path d="M 10 5 L 20 15 L 10 25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+</section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <img src="Logo_dark.svg" alt="Pedro Conde Logo" class="footer-logo">
+                    <p class="copyright">&copy; Pedro Conde 2025. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="https://www.linkedin.com/in/pedro-conde-a62245355/" target="_blank" class="footer-link">LinkedIn</a>
+                    <a href="https://www.instagram.com/hirohtm/" target="_blank" class="footer-link">Instagram</a>
+                    <button class="footer-link faq-trigger" id="faqTrigger">FAQ</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FAQ Modal -->
+    <div class="faq-overlay" id="faqOverlay">
+        <div class="faq-modal" id="faqModal">
+            <button class="faq-close" id="faqClose">&times;</button>
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    What services do you offer?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>I offer a range of design services including branding, UI/UX design, illustration, web design, and visual storytelling. Each project is tailored to meet specific client needs.</p>
+                    <p>Additionally, I also offer illustration services such as drawing requests, icons (for YouTube, Instagram, Twitch, etc.), stickers, and many more.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    How long does a typical project take?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Project timelines vary depending on scope and complexity. Smaller projects may take 2-4 weeks, while larger branding or web design projects can take 6-12 weeks.</p>
+                    <p>Same works for illustration projects, and the amount of assets requested. If it is just a single illustration, it may take 4-10 hours depending on complexity. More illustrations can take up to days.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    What is your design/drawing process?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>My process includes: discovery and research, concept development, design iterations, client feedback rounds, and final delivery with all necessary files and documentation.</p>
+                    <p>The process is quite similar for illustrations, since I want to understand my client's needs before I start sketching. I also like to send the sketch for analysis before I start the lineart.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you work with international clients?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! I work with clients worldwide and am experienced in remote collaboration using modern communication and project management tools.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    How can I get started on a project?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Simply reach out through the contact page or <a href="contact.html">here</a> with details about your project. I'll get back to you within 24-48 hours to discuss your needs and provide a proposal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

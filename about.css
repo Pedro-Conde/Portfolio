@@ -1,0 +1,553 @@
+/* ========================================
+   JOURNEY SECTION
+   ======================================== */
+
+.journey-section {
+    padding: 150px 0 100px;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 80px;
+    color: var(--primary-color);
+}
+
+.journey-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 60px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.journey-image {
+    grid-column: span 5;
+    position: sticky;
+    top: 150px;
+}
+
+.journey-image img {
+    width: 100%;
+    max-width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(125, 84, 113, 0.2);
+}
+
+.journey-text {
+    grid-column: span 7;
+}
+
+.intro-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.intro-header h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.mbti {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: #FAF7F2;
+    border-radius: 20px;
+}
+
+.flag {
+    font-size: 1.8rem;
+}
+
+.immigration-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.highlight {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .journey-section {
+        padding: 120px 0 60px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 50px;
+    }
+    
+    .journey-content {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+    
+    .journey-image {
+        grid-column: span 4;
+        position: relative;
+        top: 0;
+    }
+    
+    .journey-image img {
+        max-width: 100%;
+        height: 400px;
+    }
+    
+    .journey-text {
+        grid-column: span 4;
+    }
+    
+    .intro-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .intro-text p {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   TOOLS SECTION
+   ======================================== */
+
+.tools-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, rgba(125, 84, 113, 0.05) 0%, transparent 100%);
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tool-category {
+    grid-column: span 6;
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(125, 84, 113, 0.1);
+}
+
+.tool-category h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.tool-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.tool-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.tool-item:hover {
+    transform: translateY(-5px);
+}
+
+.tool-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.tool-item span {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .tools-section {
+        padding: 60px 0;
+    }
+    
+    .tools-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+    
+    .tool-category {
+        grid-column: span 4;
+        padding: 30px 20px;
+    }
+    
+    .tool-category h3 {
+        font-size: 1.5rem;
+    }
+    
+    .tool-items {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    
+    .tool-item img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .tool-item span {
+        font-size: 0.75rem;
+    }
+}
+
+/* ========================================
+   CORE VALUES SECTION
+   ======================================== */
+
+.values-section {
+    padding: 100px 0;
+}
+
+.values-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.value-item {
+    margin-bottom: 50px;
+    padding: 40px;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(125, 84, 113, 0.1);
+    transition: var(--transition);
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(125, 84, 113, 0.15);
+}
+
+.value-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.value-item p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.values-statement {
+    margin-top: 60px;
+    padding: 50px;
+    background: linear-gradient(135deg, rgba(125, 84, 113, 0.1) 0%, rgba(125, 84, 113, 0.05) 100%);
+    border-radius: 20px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.values-statement p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.values-statement p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .values-section {
+        padding: 60px 0;
+    }
+    
+    .value-item {
+        padding: 30px 25px;
+        margin-bottom: 30px;
+    }
+    
+    .value-item h3 {
+        font-size: 1.5rem;
+    }
+    
+    .value-item p,
+    .values-statement p {
+        font-size: 1rem;
+    }
+    
+    .values-statement {
+        padding: 30px 25px;
+        margin-top: 40px;
+    }
+}
+
+/* ========================================
+   FACTS SECTION - CARD STACK
+   ======================================== */
+
+.facts-section {
+    padding: 100px 0 150px;
+    background: linear-gradient(135deg, rgba(125, 84, 113, 0.05) 0%, transparent 100%);
+}
+
+.card-stack-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 50px;
+}
+
+.card-display {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+}
+
+.card-stack {
+    position: relative;
+    width: 450px;
+    height: 600px;
+}
+
+.fact-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    touch-action: none;
+}
+
+.fact-card:active {
+    cursor: grabbing;
+}
+
+.fact-card .card-image-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(125, 84, 113, 0.2);
+}
+
+.fact-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fact-display {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(125, 84, 113, 0.1);
+}
+
+.fact-text {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text-color);
+    text-align: justify;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fact-text.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fact-overlay {
+    display: none;
+}
+
+.card-instruction {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-top: 30px;
+}
+
+.mobile-instruction {
+    display: none;
+}
+
+.card-counter {
+    display: none;
+}
+
+/* Mobile specific styles */
+@media (max-width: 768px) {
+    .facts-section {
+        padding: 60px 0 100px;
+    }
+    
+    .card-display {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .card-stack {
+        width: 100%;
+        height: 500px;
+    }
+    
+    .fact-display {
+        display: none;
+    }
+    
+    .fact-card .card-image-wrapper {
+        position: relative;
+    }
+    
+    .fact-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(26, 18, 30, 0.3), rgba(26, 18, 30, 0.9));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+    
+    .fact-card.active .fact-overlay {
+        display: flex;
+        animation: fadeInOverlay 0.5s ease 1.5s forwards;
+    }
+    
+    .fact-card.active img {
+        filter: blur(5px) brightness(0.7);
+    }
+    
+    .fact-overlay .fact-text {
+        color: #FAF7F2;
+        text-align: center;
+        font-size: 1rem;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    @keyframes fadeInOverlay {
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .desktop-instruction {
+        display: none;
+    }
+    
+    .mobile-instruction {
+        display: block;
+    }
+    
+    .card-counter {
+        display: block;
+        text-align: center;
+        font-family: var(--font-heading);
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-top: 20px;
+    }
+}
+
+/* Stacking effect for cards */
+.fact-card:nth-child(1) {
+    z-index: 8;
+}
+
+.fact-card:nth-child(2) {
+    z-index: 7;
+    transform: scale(0.98);
+    opacity: 0.9;
+}
+
+.fact-card:nth-child(3) {
+    z-index: 6;
+    transform: scale(0.96);
+    opacity: 0.8;
+}
+
+.fact-card:nth-child(4) {
+    z-index: 5;
+    transform: scale(0.94);
+    opacity: 0.7;
+}
+
+.fact-card:nth-child(5) {
+    z-index: 4;
+    transform: scale(0.92);
+    opacity: 0.6;
+}
+
+.fact-card:nth-child(6) {
+    z-index: 3;
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+
+.fact-card:nth-child(7) {
+    z-index: 2;
+    transform: scale(0.88);
+    opacity: 0.4;
+}
+
+.fact-card:nth-child(8) {
+    z-index: 1;
+    transform: scale(0.86);
+    opacity: 0.3;
+}

@@ -1,0 +1,390 @@
+/* ========================================
+   PROJECTS SECTION
+   ======================================== */
+
+.projects-section {
+    padding: 150px 0 100px;
+    min-height: 100vh;
+}
+
+/* ========================================
+   TAB NAVIGATION
+   ======================================== */
+
+.tab-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 15px 40px;
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tab-btn:hover {
+    background-color: var(--primary-color);
+    color: #FAF7F2;
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.tab-btn.active {
+    background-color: var(--primary-color);
+    color: #FAF7F2;
+    border-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .tab-navigation {
+        gap: 15px;
+        margin-bottom: 50px;
+    }
+    
+    .tab-btn {
+        font-size: 0.95rem;
+        padding: 12px 30px;
+    }
+}
+
+/* ========================================
+   TAB CONTENT
+   ======================================== */
+
+.tab-content-wrapper {
+    position: relative;
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 80px;
+}
+
+.tab-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.tab-description {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text-color);
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .tab-header {
+        margin-bottom: 50px;
+    }
+    
+    .tab-title {
+        font-size: 2rem;
+    }
+    
+    .tab-description {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   ILLUSTRATIONS TAB - GRID LAYOUT
+   ======================================== */
+
+.illustration-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.illustration-card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(125, 84, 113, 0.1);
+    transition: var(--transition);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.illustration-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(125, 84, 113, 0.2);
+}
+
+.illustration-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.illustration-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.illustration-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(125, 84, 113, 0.9), rgba(26, 18, 30, 0.8));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.illustration-card:hover .illustration-overlay {
+    opacity: 1;
+}
+
+.view-project {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #FAF7F2;
+    transform: translateY(20px);
+    transition: var(--transition);
+}
+
+.illustration-card:hover .view-project {
+    transform: translateY(0);
+}
+
+.illustration-card:hover .illustration-image img {
+    transform: scale(1.1);
+}
+
+.illustration-info {
+    padding: 35px;
+}
+
+.illustration-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.illustration-card:hover .illustration-info h3 {
+    color: var(--text-color);
+}
+
+.illustration-info p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .illustration-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .illustration-image {
+        height: 300px;
+    }
+    
+    .illustration-info {
+        padding: 25px;
+    }
+    
+    .illustration-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .illustration-info p {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   UX/UI & GRAPHIC DESIGN TABS - LIST LAYOUT
+   ======================================== */
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.design-card {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 40px;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(125, 84, 113, 0.1);
+    transition: var(--transition);
+    text-decoration: none;
+    color: inherit;
+}
+
+.design-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 15px 50px rgba(125, 84, 113, 0.2);
+}
+
+.design-image {
+    width: 250px;
+    height: 250px;
+    background-color: var(--bg-color);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(125, 84, 113, 0.15);
+    transition: var(--transition);
+}
+
+.design-card:hover .design-image {
+    transform: scale(1.05);
+}
+
+.design-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.design-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.design-card:hover .design-info h3 {
+    color: var(--text-color);
+}
+
+.design-info .software {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-bottom: 15px;
+}
+
+.design-info .description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .projects-list {
+        gap: 30px;
+    }
+    
+    .design-card {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 30px;
+    }
+    
+    .design-image {
+        width: 100%;
+        height: 200px;
+        margin: 0 auto;
+    }
+    
+    .design-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .design-info .software {
+        font-size: 0.9rem;
+    }
+    
+    .design-info .description {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   SWEET VENOM - DUAL IMAGE HOVER EFFECT
+   ======================================== */
+
+.design-image {
+    position: relative;
+}
+
+.design-image img {
+    transition: opacity 0.5s ease;
+}
+
+.design-image .image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.design-card:hover .design-image .image-default {
+    opacity: 0;
+}
+
+.design-card:hover .design-image .image-hover {
+    opacity: 1;
+}

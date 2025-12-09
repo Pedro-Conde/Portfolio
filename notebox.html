@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteBox App - Pedro Conde</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&family=Zilla+Slab:wght@300;400;500;600&family=Allura&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="logo.svg" />
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="nana.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="Pedro Conde Logo">
+            </a>
+            
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                </ul>
+                
+                <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="project-hero">
+            <div class="container">
+                <h1 class="project-title">NoteBox</h1>
+                <p class="project-subtitle">Music Rating App Concept & Design</p>
+                
+                <div class="logo-display">
+                    <img src="notebox/Notebox_Logo.jpg" alt="NoteBox Logo">
+                </div>
+                
+                <div class="software-tags">
+                    <span class="software-tag">Figma</span>
+                    <span class="software-tag">Photoshop</span>
+                    <span class="software-tag">Canva</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study Section -->
+        <section class="project-section case-study-section">
+            <div class="container">
+                <h2 class="section-title">Case Study</h2>
+                
+                <div class="section-content">
+                    <p>This project followed a process similar to NaNa Media, requiring me to create a brand identity and mobile app concept entirely from scratch. This time, however, I wanted to explore a completely different area — moving away from e-commerce and into something closer to my heart: music.</p>
+                    
+                    <p>Music has always been one of my biggest passions. I listen to it constantly, while working, studying, and even sleeping. One of my favorite features from Spotify is the <a href="https://support.spotify.com/in-en/article/your-sound-capsule/" target="_blank">Sound Capsule</a>, which shows detailed listening statistics like top artists, songs, and total minutes played. I wanted to take that idea further and design an app that dives deeper into music engagement.</p>
+                    
+                    <p>At the same time, I’ve always admired how <a href="https://letterboxd.com/" target="_blank">Letterboxd</a> lets users rate and review movies and shows, creating a community around shared interests. I wanted to bring that same experience to music.</p>
+                    
+                    <p>And so, NoteBox was born. A platform that combines the analytical side of Spotify with the social and review-based approach of Letterboxd, all wrapped in a gamified experience that celebrates music discovery.</p>
+                </div>
+                
+                <!-- Project Details Grid -->
+                <div class="project-details">
+                    <div class="detail-card">
+                        <h3>Disciplines</h3>
+                        <ul>
+                            <li>UX Research</li>
+                            <li>UI Design</li>
+                            <li>Graphic Design</li>
+                            <li>Branding</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <h3>Responsibilities</h3>
+                        <ul>
+                            <li>Research & Ideation</li>
+                            <li>Wireframing & prototyping</li>
+                            <li>Brand creation & logo design</li>
+                            <li>Final visual design & mockups</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section class="project-section research-section">
+            <div class="container">
+                <h2 class="section-title">Research & Brainstorming</h2>
+                
+                <div class="research-grid">
+                    <div class="research-item">
+                        <h3>Problem</h3>
+                        <p>There is currently no dedicated platform that allows users to review or rate music, whether it’s artists, albums, or singles. Access to listening statistics, such as top artists, total minutes, and frequently played songs, is also limited within existing streaming platforms.</p>
+                        <p>Moreover, there’s no way for listeners to interact or compete with friends, comparing who listened to the most music, discovered the most new artists, or spent the most time listening each month.</p>
+                    </div>
+                    
+                    <div class="research-item">
+                        <h3>Goal</h3>
+                        <p>Create a music-based social hub where users can share reviews, explore stats, and interact with their friends. Through gamified challenges and achievements, users can complete missions and earn badges displayed on their profiles, bringing a playful and competitive layer to music engagement.</p>
+                    </div>
+                    
+                    <div class="research-item">
+                        <h3>Audience</h3>
+                        <p>The target audience includes music enthusiasts who enjoy discovering, rating, and discussing music across genres. They are active users of streaming services and social platforms, seeking a space that combines community, personalization, and creativity.</p>
+                    </div>
+                    
+                    <div class="research-item">
+                        <h3>Competitor Analysis</h3>
+                        <p>While some apps, such as Last.fm, provide music statistics, these features remain limited in scope and lack community interaction. Other platforms focus on social aspects but don’t integrate listening data in meaningful ways.</p>
+                        <p>NoteBox fills this gap by combining analytics, reviews, and social connectivity, offering an experience that no existing app fully delivers.</p>
+                    </div>
+                    
+                    <div class="research-item">
+                        <h3>Insights & Opportunities</h3>
+                        <p>Because this niche remains largely unexplored, NoteBox has the potential to stand out as a unique addition to the market. Future integrations could include partnerships with major streaming services like Spotify and Apple Music, allowing users to connect their accounts for more accurate and personalized data directly pulled from their listening history.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Overview Section -->
+        <section class="project-section overview-section">
+            <div class="container">
+                <h2 class="section-title">Project Overview</h2>
+                
+                <div class="overview-content">
+                    <div class="overview-subsection">
+                        <h3>App Description</h3>
+                        <p>NoteBox is a gamified music-rating and discovery app that blends social interaction, personal analytics, and community-driven exploration. The app allows users to track their listening habits, marking albums as listened or queued, giving ratings from 0.5 to 5, and writing detailed reviews.</p>
+                        
+                        <p>Users can follow friends and creators to see personalized feeds filled with reviews, lists, and favorites, making music discovery a shared experience. Through smart recommendation systems, NoteBox suggests new albums and artists based on user ratings and the listening patterns of friends, creating a dynamic and evolving discovery process.</p>
+                        
+                        <p>To let users express their musical identity, profiles feature a Top 9 section for pinning favorite albums and custom lists or shelves organized by theme, genre, or year. The Release Watchlist keeps users up to date by notifying them when their followed artists release new music.</p>
+
+                        <p>Other features include a social feed highlighting trending albums and editor picks, tagged reviews with mood and genre information, and smart recommendations powered by collaborative filtering. NoteBox also supports account syncing with Spotify, Apple Music, and Last.fm, ensuring users have accurate and up-to-date stats. Light gamification elements, such as badges and streaks, encourage engagement, while privacy controls give users flexibility over how they share their reviews and lists.</p>
+                    </div>
+                    
+                    <div class="overview-subsection">
+                        <h3>Brand Concept</h3>
+                        <p>Before approaching the visual identity, I defined the app’s features to better understand its tone and purpose. Since NoteBox blends gamified functionality with social interaction, the branding needed to feel fun, dynamic, and youthful.</p>
+                        
+                        <p>The name “NoteBox” references the Note Block item from Minecraft, a subtle nod to both creativity and music. To reflect this spirit, the logo uses Druzhba Retro, a playful and nostalgic typeface that complements the app’s energetic personality.</p>
+                    </div>
+
+                    <div class="overview-subsection">
+                        <h3>Color Palette</h3>
+                        <p>With NoteBox, I wanted to explore a more expressive and vibrant color direction. Purple has always been one of my favorite colors, so I built the palette around it and its complementary tones, red and blue.</p>
+                        
+                        <p>After several tests, I settled on a combination that felt lively yet balanced:</p>
+                        <ul>
+                            <li><strong>Cyan Blue (#00C2CB)</strong></li>
+                            <li><strong>Vivid Red (#FF4D6D)</strong></li>
+                            <li><strong>Bright Purple (#8C52FF)</strong></li>
+                        </ul>
+                        
+                        <p>These colors together convey creativity, excitement, and individuality, aligning with the brand’s mission to make music discovery feel as playful as it is personal.</p>
+                        
+                        <p>The colors <strong>Dark Purple (#241945)</strong> and <strong>Off-White (#F2EFEB)</strong> were chosen as the secondary colors.</p>
+                    </div>
+
+                    <div class="overview-subsection">
+                        <h3>Gamified Features</h3>
+                        <p>To make the experience more engaging, NoteBox integrates light gamification inspired by mobile learning platforms. These mechanics reward exploration, consistency, and community participation — turning music discovery into an interactive and social challenge.</p>
+                        
+                        <ul>
+                            <li><strong>Themed Challenges:</strong> Dynamic missions like “Review 10 R&B albums”, “Listen to 5 debut records”, or “Complete the Summer Hits badge” encourage users to explore different genres and broaden their taste.</li>
+                            <li><strong>Ranked Listening:</strong> A monthly leaderboard showcases which users in each friend group logged the most listening minutes, adding a playful sense of competition.</li>
+                            <li><strong>Badge System:</strong> Users earn collectible badges for reaching milestones such as “First 50 Reviews”, “Cross-Genre Explorer”, or “Five Star Critic”, which appear on their profile.</li>
+                            <li><strong>Streak Rewards:</strong> Daily and weekly streaks motivate users to stay active, post reviews, and interact regularly with their friends’ activity.</li>
+                            <li><strong>Community Events:</strong> Limited-time review festivals and seasonal challenges create bursts of activity and foster collaboration between users.</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Branding Section -->
+        <section class="project-section branding-section">
+            <div class="container">
+                <h2 class="section-title">Branding</h2>
+                
+                <div class="branding-grid">
+                    <!-- Colors -->
+                    <div class="branding-category">
+                        <h3>Colors</h3>
+                        <div class="color-swatches">
+                            <div class="color-swatch" style="background-color: #00C2CB;" data-hex="#00C2CB">
+                                <span class="hex-code">#00C2CB</span>
+                            </div>
+                            <div class="color-swatch" style="background-color: #FF4D6D;" data-hex="#FF4D6D">
+                                <span class="hex-code">#FF4D6D</span>
+                            </div>
+                            <div class="color-swatch" style="background-color: #8C52FF;" data-hex="#8C52FF">
+                                <span class="hex-code">#8C52FF</span>
+                            </div>
+                            <div class="color-swatch" style="background-color: #241945;" data-hex="#241945">
+                                <span class="hex-code">#241945</span>
+                            </div>
+                            <div class="color-swatch" style="background-color: #F2EFEB;" data-hex="#F2EFEB">
+                                <span class="hex-code">#F2EFEB</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Typography -->
+                    <div class="branding-category">
+                        <h3>Typography</h3>
+                        <div class="typography-samples">
+                            <div class="font-sample" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 400;">
+                                <p class="font-name">IBM Plex Sans Regular</p>
+                                <p class="font-display">The quick brown fox jumps over the lazy dog</p>
+                            </div>
+                            <div class="font-sample" style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 700;">
+                                <p class="font-name">IBM Plex Sans Bold</p>
+                                <p class="font-display">The quick brown fox jumps over the lazy dog</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Icons -->
+                    <div class="branding-category icons-category">
+                        <h3>Icons</h3>
+                        <div class="icons-grid">
+                            <div class="icon-pair">
+                                <img src="notebox/home_nb.svg" alt="Icon 1">
+                                <img src="notebox/home_nb_2.svg" alt="Icon 1 Active" class="icon-active">
+                            </div>
+                            <div class="icon-pair">
+                                <img src="notebox/search_nb.svg" alt="Icon 2">
+                                <img src="notebox/search_nb_2.svg" alt="Icon 2 Active" class="icon-active">
+                            </div>
+                            <div class="icon-pair">
+                                <img src="notebox/fire_nb.svg" alt="Icon 3">
+                                <img src="notebox/fire_nb_2.svg" alt="Icon 3 Active" class="icon-active">
+                            </div>
+                            <div class="icon-pair">
+                                <img src="notebox/menu_nb.svg" alt="Icon 4">
+                                <img src="notebox/menu_nb_2.svg" alt="Icon 4 Active" class="icon-active">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logo Variations Section -->
+        <section class="project-section logo-variations-section">
+            <div class="container">
+                <h2 class="section-title">Logo Variations</h2>
+                
+                <div class="logo-grid">
+                    <div class="logo-variation">
+                        <h4>Base</h4>
+                        <div class="logo-container">
+                            <img src="notebox/Notebox_Logo.jpg" alt="Base Logo">
+                        </div>
+                    </div>
+                    <div class="logo-variation">
+                        <h4>BW</h4>
+                        <div class="logo-container">
+                            <img src="notebox/Notebox_Logo (4).png" alt="Black & White Logo">
+                        </div>
+                    </div>
+                    <div class="logo-variation">
+                        <h4>Color 1</h4>
+                        <div class="logo-container">
+                            <img src="notebox/Notebox_Logo (5).png" alt="Color 1 Logo">
+                        </div>
+                    </div>
+                    <div class="logo-variation">
+                        <h4>Color 2</h4>
+                        <div class="logo-container">
+                            <img src="notebox/Notebox_Logo (6).png" alt="Color 2 Logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Persona Section -->
+        <section class="project-section persona-section">
+            <div class="container">
+                <h2 class="section-title">User Persona</h2>
+                
+                <div class="persona-container">
+                    <div class="persona-header">
+                        <h3>Ashley Graham</h3>
+                        <p class="persona-meta">27 • Video Game Director</p>
+                    </div>
+                    
+                    <div class="persona-bio">
+                        <p>Ashley is an energetic professional who spends most of her day surrounded by music. She often exchanges album recommendations with her friends and enjoys discovering new artists online. One day, after several friends urged her to listen to a newly released album, she wanted to rate it and share her thoughts, but realized there wasn’t a dedicated platform for that. Social media felt too cluttered, and streaming apps didn’t offer meaningful review features. That’s when she realized there was a gap for a space built just for music lovers like her.</p>              
+                    <div class="persona-details">
+                        <div class="persona-column">
+                            <h4>Pain Points</h4>
+                            <ul>
+                                <li>No centralized platform to review and share opinions about music.</li>
+                                <li>Streaming services limit interaction, with no real discussion.</li>
+                                <li>Social media conversations about music are quickly forgotten.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="persona-column">
+                            <h4>Needs</h4>
+                            <ul>
+                                <li>A community-driven app dedicated to music reviews and discovery.</li>
+                                <li>A personal space to track her listening history and evolving taste.</li>
+                                <li>Easy ways to find credible recommendations from people she trusts.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="persona-solution">
+                        <p>NoteBox addresses Ashley’s needs by providing a dedicated social hub for music discussion, allowing her to rate and review albums, follow friends, and discover new artists in an interactive and rewarding way.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Journey Section -->
+        <section class="project-section journey-section">
+            <div class="container">
+                <h2 class="section-title">User Journey - Posting and Sharing a Review</h2>
+                
+                <div class="journey-content">
+                    <div class="journey-stage">
+                        <h3>Stage 1 – Find the Album</h3>
+                        <p>Ashley opens NoteBox, taps the Search bar, types the album name, and selects it from results. (If it’s on her Feed via friends’ activity, she taps it there.)</p>
+                    </div>
+                    
+                    <div class="journey-stage">
+                        <h3>Stage 2 – Rate & Review</h3>
+                        <p>On the Album Page, she taps Rate/Review (or click on the rating icon) → selects 4.5★, writes a short review, and adds tags: Genre, Mood, and Standout Track.</p>
+                    </div>
+                    
+                    <div class="journey-stage">
+                        <h3>Stage 3 – Choose Visibility & Post</h3>
+                        <p>She sets Visibility to Friends (or Public), then taps Post Review. The review can now appear on her friends’ feeds, and a notification is sent (if enabled).</p>
+                    </div>
+                    
+                    <div class="journey-stage">
+                        <h3>Stage 4 – Tag & share to friends</h3>
+                        <p>On the posted review, she taps Share/Tag, selects her friend group, @mentions a couple of friends, and adds the review to her Summer Hits list. Friends receive in-app notifications.</p>
+                    </div>
+                    
+                    <div class="journey-stage">
+                        <h3>Stage 5 – Follow-up & Engage</h3>
+                        <p>Comments and reactions roll in. Ashley earns the First Review badge, pins the album to her Top 9, and adds the artist to her Release Watchlist to get notified about future drops.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Designs Section -->
+        <section class="project-section wireframes-section">
+            <div class="container">
+                <h2 class="section-title">Final Designs</h2>
+                
+                <div class="wireframe-viewer">
+                    <div class="wireframe-display">
+                        <div class="wireframe-image">
+                            <img src="nana/Home-Page-Mockup.jpg" alt="Home Page Wireframe" id="wireframeImage">
+                        </div>
+                        <div class="wireframe-info" id="wireframeInfo">
+                            <h3 id="wireframeTitle">Home Page</h3>
+                            <div id="wireframeDescription">
+                                <p>The Home Page was designed to immediately draw users into the NoteBox experience by blending social interaction and progress tracking.</p>
+                                <p>The first section, “<strong>What your friends are listening to </strong>,” highlights real-time activity across the user’s network, displaying which albums or artists their friends are currently enjoying, complete with friend tags for easy recognition. This feature encourages engagement and discovery through shared listening habits.</p>
+                                <p>The second section, “<strong>Your Challenges</strong>,” focuses on gamified engagement. It displays the user’s active challenges and progress in percentage form, while also suggesting new challenges based on their listening history and behavioral data. Whether users are exploring a new genre or completing a themed badge, this area keeps them motivated to interact with the platform consistently.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="wireframe-controls">
+                        <button class="btn btn-secondary" id="prevWireframe">← Previous</button>
+                        <button class="btn btn-primary" id="nextWireframe">Next →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Buttons -->
+        <section class="project-navigation">
+            <div class="container">
+                <div class="nav-buttons">
+                    <a href="notebox.html" class="btn btn-secondary">See Next Project</a>
+                    <a href="projects.html" class="btn btn-primary">Go Back to Projects</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <img src="Logo_dark.svg" alt="Pedro Conde Logo" class="footer-logo">
+                    <p class="copyright">&copy; Pedro Conde 2025. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="https://www.linkedin.com/in/pedro-conde-a62245355/" target="_blank" class="footer-link">LinkedIn</a>
+                    <a href="https://www.instagram.com/hirohtm/" target="_blank" class="footer-link">Instagram</a>
+                    <button class="footer-link faq-trigger" id="faqTrigger">FAQ</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FAQ Modal -->
+    <div class="faq-overlay" id="faqOverlay">
+        <div class="faq-modal" id="faqModal">
+            <button class="faq-close" id="faqClose">&times;</button>
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    What services do you offer?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>I offer a range of design services including branding, UI/UX design, illustration, web design, and visual storytelling. Each project is tailored to meet specific client needs.</p>
+                    <p>Additionally, I also offer illustration services such as drawing requests, icons (for YouTube, Instagram, Twitch, etc.), stickers, and many more.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    How long does a typical project take?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Project timelines vary depending on scope and complexity. Smaller projects may take 2-4 weeks, while larger branding or web design projects can take 6-12 weeks.</p>
+                    <p>Same works for illustration projects, and the amount of assets requested. If it is just a single illustration, it may take 4-10 hours depending on complexity. More illustrations can take up to days.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    What is your design/drawing process?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>My process includes: discovery and research, concept development, design iterations, client feedback rounds, and final delivery with all necessary files and documentation.</p>
+                    <p>The process is quite similar for illustrations, since I want to understand my client's needs before I start sketching. I also like to send the sketch for analysis before I start the lineart.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you work with international clients?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! I work with clients worldwide and am experienced in remote collaboration using modern communication and project management tools.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    How can I get started on a project?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Simply reach out through the contact page or <a href="contact.html">here</a> with details about your project. I'll get back to you within 24-48 hours to discuss your needs and provide a proposal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
